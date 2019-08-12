@@ -1,0 +1,46 @@
+/* line 1, C:/COS10020/Websites/Base/scss/base/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, C:/COS10020/Websites/Base/scss/base/_base.scss */
+body {
+  font-family: arial;
+  color: black;
+  background-color: white;
+}
+
+/* line 4, C:/COS10020/Websites/Base/scss/modules/_components.scss */
+.desktop {
+  background: red;
+}
+
+@media (min-width: 768px) {
+  /* line 4, C:/COS10020/Websites/Base/scss/modules/_components.scss */
+  .desktop {
+    background: green;
+  }
+}
+
+/* line 11, C:/COS10020/Websites/Base/scss/modules/_components.scss */
+.android {
+  background: red;
+}
+
+/* line 3, C:/COS10020/Websites/Base/scss/base/_mixins.scss */
+html[data-browser*="Android"] .android {
+  background: green;
+}
+
+/* line 18, C:/COS10020/Websites/Base/scss/modules/_components.scss */
+.iphone {
+  background: red;
+}
+
+/* line 3, C:/COS10020/Websites/Base/scss/base/_mixins.scss */
+html[data-browser*="iPhone"] .iphone {
+  background: green;
+}
+
+/*# sourceMappingURL=../css/main.map */

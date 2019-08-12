@@ -1,0 +1,28 @@
+{
+	"version": 3,
+	"file": "../scss/main.css",
+	"sources": [
+		"../scss/main.scss",
+		"../scss/base/_variables.scss",
+		"../scss/base/_mixins.scss",
+		"../scss/base/_reset.scss",
+		"../scss/base/_base.scss",
+		"../scss/modules/_typography.scss",
+		"../scss/modules/_buttons.scss",
+		"../scss/modules/_blocks.scss",
+		"../scss/modules/_components.scss"
+	],
+	"sourcesContent": [
+		"@import 'base/_variables.scss';\r\n@import 'base/_mixins.scss';\r\n@import 'base/_reset.scss';\r\n@import 'base/_base.scss';\r\n\r\n@import 'modules/_typography.scss';\r\n@import 'modules/_buttons.scss';\r\n@import 'modules/_blocks.scss';\r\n@import 'modules/_components.scss';\r\n",
+		"$primary-color: rgb(19,22,24);\r\n",
+		"@mixin browser($browsers) {\r\n  @each $browser in $browsers {\r\n    html[data-browser*=\"#{$browser}\"] & {\r\n      @content;\r\n    }\r\n  }\r\n}\r\n\r\n\r\n$tablet-width: 768px;\r\n$desktop-width: 768px;\r\n\r\n@mixin tablet {\r\n  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {\r\n    @content;\r\n  }\r\n}\r\n\r\n@mixin desktop {\r\n  @media (min-width: #{$desktop-width}) {\r\n    @content;\r\n  }\r\n}\r\n",
+		"* {\r\n     margin: 0;\r\n     padding: 0;\r\n}\r\n",
+		"body {\r\n     font-family: arial;\r\n     color: black;\r\n     background-color: white;\r\n}\r\n",
+		"",
+		"",
+		"",
+		"//test what type of device is being used\r\n//sass written by Roland Warburton (2018) with reference to http://aslanbakan.com/en/blog/browser-and-device-specific-css-styles-with-sass-and-less-mixins/\r\n\r\n.desktop {\r\n          background: red;\r\n          @include desktop {\r\n              background: green;\r\n          }\r\n}\r\n\r\n.android {\r\n          background: red;\r\n  @include browser(\"Android\") {\r\n            background: green;\r\n  }\r\n}\r\n\r\n  .iphone {\r\n            background: red;\r\n    @include browser(\"iPhone\") {\r\n              background: green;\r\n    }\r\n}\r\n"
+	],
+	"mappings": ";AGAA,AAAA,CAAC,CAAC;EACG,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;CACf;;;ACHD,AAAA,IAAI,CAAC;EACA,WAAW,EAAE,KAAM;EACnB,KAAK,EAAE,KAAM;EACb,gBAAgB,EAAE,KAAM;CAC5B;;;AIDD,AAAA,QAAQ,CAAC;EACC,UAAU,EAAE,GAAI;CAIzB;;ANWC,MAAM,EAAL,SAAS,EAAE,KAAK;;EMhBnB,AAAA,QAAQ,CAAC;IAGK,UAAU,EAAE,KAAM;GAE/B;;;;AAED,AAAA,QAAQ,CAAC;EACC,UAAU,EAAE,GAAI;CAIzB;;;ANbG,AMQJ,INRQ,CAAA,AAAA,YAAC,EAAc,SAAS,AAAvB,EMQT,QAAQ,CNRJ;EMWQ,UAAU,EAAE,KAAM;CNTzB;;;AMaH,AAAA,OAAO,CAAC;EACE,UAAU,EAAE,GAAI;CAI3B;;;ANpBG,AMeF,INfM,CAAA,AAAA,YAAC,EAAc,QAAQ,AAAtB,EMeP,OAAO,CNfL;EMkBU,UAAU,EAAE,KAAM;CNhB3B",
+	"names": []
+}

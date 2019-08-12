@@ -1,0 +1,23 @@
+//test what type of device is being used
+//sass written by Roland Warburton (2018) with reference to http://aslanbakan.com/en/blog/browser-and-device-specific-css-styles-with-sass-and-less-mixins/
+
+.desktop {
+          background: red;
+          @include desktop {
+              background: green;
+          }
+}
+
+.android {
+          background: red;
+  @include browser("Android") {
+            background: green;
+  }
+}
+
+  .iphone {
+            background: red;
+    @include browser("iPhone") {
+              background: green;
+    }
+}
