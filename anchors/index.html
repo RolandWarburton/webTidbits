@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+	<div id="top">
+		<span>top of the page</span>
+		<a href="#top">(go to top)</a>
+		<a href="#bot">(go to bottom)</a>
+	</div>
+
+	<div class="pad"></div>
+
+	<button onclick="navigator.clipboard.writeText(document.location.href).then((text) => {console.log('done')})">click
+		to put url in clipboard</button>
+
+	<div class="pad"></div>
+
+	<div id="bot">
+		<span>bottom of the page</span>
+		<a href="#top">(go to top)</a>
+		<a href="#bot">(go to bottom)</a>
+	</div>
+
+	<script type="text/javascript" language="javascript">
+		// read the url hash and try and find it on the page
+		// https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+		const hash = window.location.hash
+		const e = (hash) ? document.getElementById(window.location.hash.replace('#', '')) : undefined;
+		if (e) e.scrollIntoView();
+	</script>
+
+</body>
+
+</html>

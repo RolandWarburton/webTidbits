@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #121212;
+	color: #fefefe;
+}
+
+.list {
+	background-color: #adadad;
+}
+
+.pad {
+	height: 100vh;
+}
